@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Date</title>
+</head>
+<body>
+
+<h1 id="day"> Today's Date </h1>
+
+
+<script>
+
+	var today = new Date();
+   //var day1 = prompt("Enter number: ");
+
+
+   switch(today.getDay()){
+		case 0: document.getElementById("day").innerHTML="Today's Day is Sunday";
+		break;
+
+		case 1: document.getElementById("day").innerHTML="Today's Day is Monday";
+		break;
+
+		case 2: document.getElementById("day").innerHTML="Today's Day is Tuesday";
+			console.log("Tuesday");
+		break;
+
+		case 3:document.getElementById("day").innerHTML="Today's Day is Wednesday"; console.log("Today is Wednesday");
+		break;
+
+		case 4: document.getElementById("day").innerHTML="Today's Day is Thursday";console.log("Today is Thursday");
+		break;
+
+		case 5:document.getElementById("day").innerHTML="Today's Day is Friday"; console.log("Today is Friday");
+		break;
+
+		case 6:document.getElementById("day").innerHTML="Today's Day is Saturday"; console.log("Today is Saturday");
+		break;
+	}
+
+
+</script>
+</body>
+</html>

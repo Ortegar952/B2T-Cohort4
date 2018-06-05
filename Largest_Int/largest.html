@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Largest Numbers</title>
+</head>
+<body>
+
+<h1 id="largest"></h1>
+
+
+<script>
+	var num1=parseInt(prompt("Enter First Number: "));
+	var num2=parseInt(prompt("Enter Second Number: "));
+	var num3=parseInt(prompt("Enter Third Number: "));
+
+
+
+	if(num2 > num1 && num2 > num3){
+
+		document.getElementById("largest").innerHTML = "This is the largest : " + num2;
+	}
+	else if(num1 > num2 && num1 > num3){
+
+		document.getElementById("largest").innerHTML = "This is the largest : " +num1;
+	}
+	else if(num3 > num1 && num3 > num2 ){
+
+		document.getElementById("largest").innerHTML = "This is the largest : " +num3;
+	}
+	else if( num1 == num2 && num2 == num3 && num3 == num1)
+		document.getElementById("largest").innerHTML = "They are all the same !! " ;
+	else
+		document.getElementById("largest").innerHTML = "Integer Was Not Entered";
+
+
+
+</script>
+</body>
+</html>
