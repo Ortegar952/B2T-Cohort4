@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ON || OFF </title>
+
+	<style type="text/css">
+	#color{
+		border: 1px solid black;
+		width: 300px;
+		height: 300px;
+			}
+
+	#on{
+
+		text-align: center;
+		font-size: 500px;
+	}
+	
+
+
+	</style>
+</head>
+<body>
+	<input id="on" type="button" value=" IS IT ON OR OFF ? " >
+	<div id='color'></div>
+
+	<script type="text/javascript">
+
+		document.getElementById('color').style.backgroundColor = "green";
+
+
+		function changeColor(){
+			var color1=document.getElementById('color');
+
+			if(color1.style.backgroundColor == 'red'){
+				console.log("it works");
+			 	color1.style.backgroundColor = 'green';
+			}
+			else{
+				console.log("nothing");
+				color1.style.backgroundColor = 'red';
+			}
+		}
+
+
+		 
+
+		document.getElementById('on').addEventListener('click',function(){
+		var onbutton = document.getElementById('on'); 
+
+		if(onbutton.value !== "OFF")
+			{
+				document.getElementById('on').value = "OFF";
+			}
+
+		else if(onbutton.value == "OFF")
+			{
+				document.getElementById('on').value = "ON";
+				document.getElementById('color').addEventListener('mouseleave', changeColor);
+		        document.getElementById('color').addEventListener('mouseenter', changeColor);
+			   
+			}
+	
+
+		});
+
+		
+
+
+	</script>
+
+</body>
+</html>
