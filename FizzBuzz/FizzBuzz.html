@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fizz Buzz !</title>
+	<style type="text/css">
+		
+		h1{
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Integers From 1 to 100</h1>
+	<input onclick="magic()" type="button" value="Reveal The Numbers">
+	<h1 id="message2"></h1>
+
+		<script>
+			var num =1;
+
+			function magic(){
+			while(num<=100){
+
+
+
+				if(num%5 == 0 && num%3 == 0){
+					document.getElementById("message2").innerHTML+= "FizzBuzz" + "<br>";
+					console.log("FizzBuzz");
+				}
+				else if(num%3 == 0){
+					document.getElementById("message2").innerHTML +="Fizz" + "<br>";
+					console.log("Fizz");
+				}
+
+				else if(num%5 == 0){
+					document.getElementById("message2").innerHTML +="Buzz" + "<br>";
+					console.log("Buzz");
+					}
+
+
+				else{
+				   document.getElementById("message2").innerHTML += num + "<br>";
+					console.log(num);
+				}
+				num ++;
+
+			}
+			
+
+		}
+
+		</script>
+
+</body>
+</html>

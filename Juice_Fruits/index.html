@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juice Bar</title>
+</head>
+<body>
+	
+<h1 id="show">Let's Make A Juice ! </h1>
+<style>
+.button{
+	color: red;
+	font-size:100px;
+	margin-left: 50%;
+}
+
+</style>
+
+
+<input class="button" type="button" onclick="addFruit()" value="Click Me To Add Fruit" />
+
+
+
+<script>
+
+
+	var juices=[];
+
+	function addFruit(){
+
+	    var fruit= prompt("Enter New Fruit").toLowerCase();		
+		juices.push(fruit);
+		juices.sort();
+
+		document.getElementById("show").innerHTML="Juice Ingredients: " + juices.join(" with ");
+
+
+     }
+	
+</script>
+
+</body>
+</html>

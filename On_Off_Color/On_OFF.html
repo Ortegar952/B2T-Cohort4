@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ON || OFF </title>
+
+	<style type="text/css">
+	#color{
+		border: 1px solid black;
+		width: 300px;
+		height: 300px;
+		margin-left: 50%;
+		margin-top: 10%;
+			}
+
+	#on{
+
+        background-color: #000000;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 10px;
+        margin:10px;
+		margin-left: 50%;
+		font-size: 50px;
+	}
+	
+
+
+	</style>
+</head>
+<body>
+	<input id="on" type="button"  value=" IS IT ON OR OFF ? " >
+	<div id='color'></div>
+
+	<script type="text/javascript">
+
+		document.getElementById('color').style.backgroundColor = "green";
+		var onbutton = document.getElementById('on'); 
+
+
+
+	    document.getElementById('on').addEventListener('click',function(){
+
+			if(onbutton.value !== "OFF")
+				{
+					document.getElementById('on').value = "OFF";
+				}
+
+			else if(onbutton.value == "OFF")
+				{
+					document.getElementById('on').value = "ON";	  	
+	    		}
+					
+					//the box shouldn't change the color once the mouse leaves.	
+			 // document.getElementById('color').addEventListener('mouseleave', changeColor);
+			 // document.getElementById('color').addEventListener('mouseenter', changeColor);
+
+		});
+
+
+		function changeColor(){
+			var color1=document.getElementById('color');
+
+			if(color1.style.backgroundColor == 'green' && onbutton.value ==="ON"){
+				console.log("first change");
+			 	color1.style.backgroundColor = 'red';
+			}
+			else{
+				console.log("default green");
+				color1.style.backgroundColor = 'green';
+			}
+		}	 
+
+	    document.getElementById('color').addEventListener('mouseenter',function(){
+	     	if(onbutton.value == "ON"){
+	    		console.log("it is changing");
+	    	    document.getElementById('color').addEventListener('mouseenter',changeColor)
+	    	    document.getElementById('color').addEventListener('mouseleave', changeColor);
+	    	}
+	    
+
+	     });
+
+
+		
+
+
+	</script>
+
+</body>
+</html>

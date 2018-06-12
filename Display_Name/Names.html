@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Names</title>
+</head>
+<body>
+	
+<h1 id="display"></h1>
+
+<form >
+First name:<input type="text" id="fname"/><br >
+Last name:<input type="text" id="lname"/><br >
+<input type="button" onclick="getValue()"  value="submit"/>
+</form >
+
+
+
+	<script>
+
+			function getValue(){
+			var name = document.getElementById("fname").value;
+			var lname = document.getElementById("lname").value;
+			console.log(name);
+			console.log(lname);
+	        document.getElementById("display").innerHTML = "Full Name:" + name + lname+'!!!';
+			}
+	
+	</script>
+
+</body>
+</html>
